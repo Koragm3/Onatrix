@@ -1,0 +1,37 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+
+
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+
+   
+@{
+    var buttonLink = Model.Value<Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent>("services");
+    var buttonLinkUrl = buttonLink?.Url();
+    var logoImg = Model?.Value<IPublishedContent>("logoImage")?.Url() ?? "";
+       
+
+}
+
+
+
+<div id="head" class="container">
+    <div class="loga">
+         <img src="@logoImg" alt="" />
+
+    </div>
+    <div class="pages">
+        <a href="">About us</a>
+        <a href="">Services</a>
+        <a href="">Projects</a>
+        <a href="">Contact</a>
+
+    </div>
+    <div>
+       <form id="searchForm">
+        <button class="search_icon"><i class="fa-regular fa-magnifying-glass"></i></button>
+        
+       </form>
+    </div>
+    
+</div>
