@@ -14,9 +14,9 @@ jobs:
         with:
           dotnet-version: '8.x'
       - name: Build with dotnet
-        run: dotnet build Onatrix.csproj --configuration Release  # Replace with your project file
+        run: dotnet build  --configuration Release  # Replace with your project file
       - name: Publish with dotnet
-        run: dotnet publish Onatrix.csproj -c Release -o ./myapp  # Replace with your project file
+        run: dotnet publish -c Release -o ./myapp  # Replace with your project file
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
