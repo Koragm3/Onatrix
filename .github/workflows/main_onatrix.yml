@@ -42,5 +42,5 @@ jobs:
         with:
           app-name: 'Onatrix'
           slot-name: 'Production'
-          package: ./myapp  # Ensure this points to the correct output directory
+          package: .  # Ensure this points to the correct output directory
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3F40D3326C134A31AA0C385470DF69D9 }}
